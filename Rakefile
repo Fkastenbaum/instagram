@@ -1,5 +1,5 @@
 require 'nokogiri'
-require 'open-URI'
+require 'open-uri'
 require 'mailgun'
 require './lib/scraper.rb'
 require './lib/emailer.rb'
