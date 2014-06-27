@@ -9,8 +9,8 @@ task :check_tweet_time do
   if normal_tweeted_time > Time.now - 10 * 60
     @emailer = Emailer.new
     @emailer.send_email
-    puts "Sent email!"
+    puts "Email sent!"
   else
-    puts "No new tweets"
+    puts "No new tweets ~ Do nothing!"
   end
 end
