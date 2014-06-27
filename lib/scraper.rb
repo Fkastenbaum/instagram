@@ -1,22 +1,24 @@
-require 'open-uri'
+require 'nokogiri'
+require 'pry'
+require 'open-URI'
 
 class Scraper
-  
-  attr_accessor :tweet_text
-  attr_accessor :tweet_time
+
+
   attr_accessor :doc
 
-  def initialize(doc)
-    @doc = Nokogiri::HTML(open("#{doc}"))
-    @tweet_text = self.get_tweets_text
-    @tweet_time = self.get_tweets_time
+  def initialize doc
+    @doc = Nokogiri::HTML(open(doc))
   end
 
-  def get_tweets_text
-    tweet_text = @doc.css('p.js-tweet-text').first.text
+
+  def uploads
+    featured = doc.css(".yt-lockup-title")
+    link = featured.at_css("h3 a").attributes["href"].value
+    headline = "https://youtube.com#{link}"
   end
 
-  def get_tweets_time
-    tweeted_time = @doc.css('.js-short-timestamp').first.attributes["data-time"].value
-  end
 end
+
+my_scraper = Scraper.new("https://www.youtube.com/user/GoProCamera/feed?filter=2")
+puts my_scraper.uploads

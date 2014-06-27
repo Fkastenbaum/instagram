@@ -7,11 +7,11 @@ class Emailer
   end
 
   def send_email
-    @scraper = Scraper.new("https://twitter.com/jongrover")
+    @scraper = Scraper.new("https://www.youtube.com/user/GoProCamera/feed?filter=2")
     parameters = {
-      :to => "jon@flatironschool.com",
-      :subject => "New Tweet!",
-      :text => "Here's the tweet: #{@scraper.tweet_text}",
+      :to => "wsisson1@gmail.com",
+      :subject => "New Video",
+      :text => "Here it is: #{@scraper.upload}",
       :from => "postmaster@sandbox9e40982438de4c218c126056aa8f25ea.mailgun.org"
     }
     @mailgun = Mailgun()
