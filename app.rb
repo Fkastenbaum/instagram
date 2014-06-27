@@ -7,6 +7,9 @@ require 'open-uri'
 
 get '/' do
   scraper = Scraper.new("https://www.youtube.com/user/GoProCamera/feed?filter=2")
-  @upload = scraper.uploads
+  scraper.uploads
+  @link = scraper.link
+  @headline = scraper.headline
+  @time = scraper.time
   erb :index
 end
