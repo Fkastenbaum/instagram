@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<a href="/connect">Connect with Instagram</a>
-
+	<h1>Welcome</h1>
+	<p><%= @token %></p>
 </body>
 </html>
