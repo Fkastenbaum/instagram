@@ -1,0 +1,4 @@
+1. create a sinatra application
+2. in the lib directory create a person class that assigns a name and age attribute 
+3. your html/erb file needs to contain an  input form so that when i go to localhost:9292 i see a form where i can enter a friends name and age
+4. when i submit the form, i want it to take me to a new page that displays the name and age of the person i entered on the home page
