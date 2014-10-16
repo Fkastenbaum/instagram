@@ -1,1 +1,9 @@
-<h1>HI!!</h1>
+<% get "/location_recent_media" do
+  client = Instagram.client(:access_token => session[:access_token])
+  html = "<h1>Media from the Instagram Office</h1>"
+  for media_item in client.location_recent_media(419976626)
+    html << "<img src='#{@instagram_scraperl}'>"
+  end
+  html %>
+<% end %>
+

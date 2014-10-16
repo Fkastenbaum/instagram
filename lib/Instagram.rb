@@ -19,20 +19,32 @@ class InstagramScraper
 		 media_item = client.user_recent_media("419976626")
 		  media_item
 	end 
+# 	end 
+# class link
+# 	def retrieve_photo
+# 	end
 
+# config/routes.rb
+# end 
+
+
+
+# def retreive_photo
+# 	image = params[:code]
+	
+# end
+
+
+end 
 
 	#def a method that pulls an instagram photo by its own id
 
-# 	def image1
-# 		@image1_page = 782697165059878708_419976626
-
-
-# end 
+	# def image1
+	# 	#:name == 782697165059878708_419976626
+	# <link rel=":name" type=="text/css" href="http://localhost:9292/user_recent_media/782752586697108729_419976626">
+ # 	end 
 
 # def image2
 # 	:name = 782697165059878708_419976626
 # end 
 
-
-
-end

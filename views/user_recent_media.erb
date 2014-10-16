@@ -1,14 +1,13 @@
 <h1> Here is new fork city's photos:</h1>
 
 <% @media_item.each do |item| %>
-	<div style='float:left;'>
-		<a href="user_recent_media/<%=item.id%>">
-			<img src='<%="#{item.images.thumbnail.url}"%>'>
-		</a>
-		<br>
-		<a href='/media_like/#{item.id}'>Like</a>  <a href='/media_unlike/#{item.id}'>Un-Like</a>  <br/>LikesCount= <%=item.likes[:count]%></div>
-	</div>
+<div style='float:left;'>
+	<a href="user_recent_media/<%=item.id%>">
+		<img src='<%="#{item.images.thumbnail.url}"%>'>
+	</a>
+</div>
 
-<% end %>
+
+<% end%>
 
 	
